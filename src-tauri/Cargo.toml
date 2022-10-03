@@ -1,7 +1,7 @@
 [package]
-name = "simple_notepad"
+name = "simple_notebook"
 version = "0.1.0"
-description = "SimpleNotepad"
+description = "SimpleNotebook"
 authors = ["you"]
 license = ""
 repository = ""
