@@ -27,10 +27,8 @@ export default function Menubar({editor}: IMenubarProp) {
     [
       {icon: 'double-quotes-l', onClick: () => getFocus().toggleBlockquote().run(), isActive: isActive('blockquote')},
       {icon: 'separator', onClick: () => getFocus().setHorizontalRule().run() }
-
     ]
   ]
-    
   return <div className="menu">
     {menus.map(group => {
       return <div className="group-item">
@@ -38,7 +36,6 @@ export default function Menubar({editor}: IMenubarProp) {
           return  <button className="menu-item" onClick={item.onClick}>
         <i className={`ri-${item.icon} ${item.isActive}`}></i>
       </button>
-
         })}
       </div>
           })}

@@ -7,11 +7,27 @@
   },
   "package": {
     "productName": "simple_notepad",
-    "version": "0.1.0"
+    "version": "0.1.1"
   },
   "tauri": {
     "allowlist": {
-      "all": true
+      "all": true,
+      "fs": {
+        "all": true,
+        "readFile": true,
+        "writeFile": true,
+        "readDir": true,
+        "copyFile": true,
+        "createDir": true,
+        "removeDir": true,
+        "removeFile": true,
+        "renameFile": true,
+        "exists": true,
+        "scope": [
+          "$APP/*",
+          "$DOWNLOAD/*"
+        ]
+      }
     },
     "bundle": {
       "active": true,
