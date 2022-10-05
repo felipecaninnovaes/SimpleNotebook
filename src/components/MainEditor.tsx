@@ -11,13 +11,13 @@ async function CreateDir(){
     createDir('log',{dir: BaseDirectory.App, recursive: true})
     await writeTextFile('example_file.txt', '', { dir: BaseDirectory.App});
   }
-  let info = localStorage.setItem('info', 'true')
+  let info: void = localStorage.setItem('info', 'true')
 }
 
 CreateDir()
-const appDirPath =  await appDir();;
-const filePath = `${appDirPath}example_file.txt`;
-const database = await readTextFile(filePath)
+const appDirPath: string =  await appDir();;
+const filePath: string = `${appDirPath}example_file.txt`;
+const database: string = await readTextFile(filePath)
 
 export default function MainEditor(): JSX.Element {
 
